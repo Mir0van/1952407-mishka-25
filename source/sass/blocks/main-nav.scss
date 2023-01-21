@@ -1,0 +1,42 @@
+.main-nav {
+  @include font-values(700, 17px, 1.41);
+  background-color: $main-color;
+}
+
+.main-nav--no-js {
+  display: block;
+  position: static;
+}
+
+.main-nav__toogle--nojs {
+  display: none;
+}
+
+.main-nav__primary-list,
+.main-nav__user-nav,
+.main-nav__secondary-list {
+  @include reset-list;
+}
+
+.main-nav__secondary-list {
+  display: none;
+}
+
+.main-nav__item {
+  border-top: 1px solid #ececec;
+}
+
+.main-nav__link {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 27px 33px 27px 76px;
+  position: relative;
+}
+
+.main-nav__icon {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,11 @@
+.main-header__logo-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 22px 30px 16px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-header__logo-wrapper {
+    // position: absolute;
+  }
+}

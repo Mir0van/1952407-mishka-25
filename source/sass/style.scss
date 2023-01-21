@@ -1,1 +1,12 @@
-// Начните писать стили здесь
+// basic styles
+@import "./basic/variables.scss";
+@import "./basic/mixins.scss";
+@import "./basic/fonts.scss";
+@import "./basic/base.scss";
+@import "./basic/visually-hidden.scss";
+
+// index
+@import "./blocks/page.scss";
+@import "./blocks/main-page.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/main-nav.scss";
