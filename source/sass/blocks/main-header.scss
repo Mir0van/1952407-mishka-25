@@ -1,11 +1,15 @@
-.main-header__logo-wrapper {
-  display: flex;
-  justify-content: center;
-  padding: 22px 30px 16px;
+@media (min-width: $tablet-width) {
+  .main-header {
+    background-color: $color-tertiary;
+  }
 }
 
-@media (min-width: $tablet-width) {
-  .main-header__logo-wrapper {
-    // position: absolute;
+@media (min-width: $desktop-width) {
+  .main-header {
+    overflow-x: hidden;
+  }
+
+  .main-header__nav {
+    margin: 0 auto;
   }
 }
