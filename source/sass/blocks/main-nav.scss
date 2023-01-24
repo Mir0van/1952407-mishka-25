@@ -236,6 +236,10 @@
     padding: 34px 0 30px;
   }
 
+  .main-nav__user-nav .main-nav__item {
+    align-self: start;
+  }
+
   .main-nav__secondary-list .main-nav__item:not(:last-child) {
     margin-right: 62px;
   }

@@ -11,6 +11,12 @@
 }
 
 .main-page__reviews {
+  margin-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 66px;
+  }
+
   @media (min-width: $desktop-width) {
     margin: 0 auto;
   }
