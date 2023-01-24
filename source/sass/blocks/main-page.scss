@@ -1,3 +1,17 @@
 .main-page {
   flex-grow: 1;
 }
+
+.main-page__about {
+  margin-bottom: 58px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 84px;
+  }
+}
+
+.main-page__reviews {
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+  }
+}
