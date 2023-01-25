@@ -8,4 +8,15 @@
   padding: 14px 10px;
   cursor: pointer;
   text-decoration: none;
+  transition: 0.1s;
+
+  &:hover {
+    color: $main-color;
+    background-color: $color-quaternary;
+  }
+
+  &:active {
+    color: rgba($main-color, 30%);
+    background-color: $color-quaternary;
+  }
 }

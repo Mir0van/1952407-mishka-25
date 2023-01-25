@@ -39,3 +39,16 @@
     width: 1050px;
   }
 }
+
+.main-catalog__production {
+  margin-bottom: 56px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    margin-bottom: 105px;
+  }
+}
