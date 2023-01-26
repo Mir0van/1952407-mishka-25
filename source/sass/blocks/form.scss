@@ -1,0 +1,89 @@
+.form {
+  overflow-x: hidden;
+}
+
+.form__wrapper-group {
+  padding: 0 30px;
+}
+
+.form__group {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form__legend {
+  @include font-values(400, 17px, 0.94, $color-brand);
+  text-transform: uppercase;
+  background-color: $main-color;
+  padding: 0 25px 0 30px;
+  margin-left: -30px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100vw;
+    background-color: $color-brand;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+}
+
+.form__list {
+  @include reset-list;
+  @include font-values(700, 17px, 1.06);
+}
+
+.form__other-input {
+  font-family: $font-main;
+  font-size: 17px;
+  line-height: 1.06;
+  margin-top: 21px;
+  margin-bottom: 11px;
+  padding: 15px;
+  width: 100%;
+  min-height: 142px;
+  border: 2px solid $main-color-text;
+  resize: none;
+
+  &::placeholder {
+    color: rgba($main-color-text, 30%);
+    font-size: 19px;
+    line-height: 0.95;
+    letter-spacing: -1px;
+    word-spacing: -1px;
+  }
+
+  &:hover,
+  &:active {
+    border-color: $color-brand;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: $color-brand;
+  }
+}
+
+.form__wrapper-button {
+  padding: 0 30px;
+  margin-bottom: 55px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__required-info {
+  font-size: 14px;
+  line-height: 1.14;
+  margin-bottom: 29px;
+}
+
+.form__button {
+  font-size: 17px;
+  line-height: 0.94;
+  padding: 16px 10px;
+}
