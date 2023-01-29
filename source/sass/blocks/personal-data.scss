@@ -3,11 +3,30 @@
   padding-bottom: 31px;
   display: grid;
   row-gap: 23px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    row-gap: 24px;
+  }
 }
 
 .personal-data__label {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.personal-data__text {
+  @media (min-width: $tablet-width) {
+    font-size: 19px;
+    line-height: 0.95;
+    margin-right: 25px;
+    flex-shrink: 0;
+  }
 }
 
 .personal-data__input {
@@ -31,5 +50,13 @@
   &:focus-visible {
     outline: none;
     border-color: $color-brand;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 19px;
+    line-height: 0.95;
+    height: 52px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }

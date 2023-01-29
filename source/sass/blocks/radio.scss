@@ -2,6 +2,11 @@
   padding: 30px 0 32px;
   display: grid;
   row-gap: 14px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    row-gap: 26px;
+  }
 }
 
 .radio__label {
@@ -26,6 +31,19 @@
   border-radius: 50%;
   flex-shrink: 0;
   margin-right: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 50px;
+    height: 50px;
+    margin-right: 27px;
+  }
+}
+
+.radio__control-description {
+  @media (min-width: $tablet-width) {
+    font-size: 19px;
+    line-height: 0.95;
+  }
 }
 
 .radio__input[type="radio"]:checked + .radio__control-mark::before {
@@ -38,6 +56,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .radio__input[type="radio"]:focus-visible + .radio__control-mark {

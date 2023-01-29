@@ -1,7 +1,19 @@
+.contacts-data {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 147px 1fr;
+    column-gap: 20px;
+  }
+}
+
 .contacts-data__wrapper-input {
   padding-top: 6px;
   padding-bottom: 34px;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .contacts-data__input {
@@ -26,6 +38,14 @@
     outline: none;
     border-color: $color-brand;
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: 19px;
+    line-height: 0.95;
+    padding: 0 70px 0 18px;
+    height: 52px;
+    background-color: transparent;
+  }
 }
 
 .contacts-data__input:hover + .contacts-data__input-icon,
@@ -41,4 +61,13 @@
   transform: translateY(-50%);
   opacity: 1;
   fill: rgba($main-color-text, 20%);
+
+  @media (min-width: $tablet-width) {
+    top: 50%;
+    right: 22px;
+
+    &--tel {
+      right: 25px;
+    }
+  }
 }
