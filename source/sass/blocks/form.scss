@@ -8,6 +8,10 @@
   @media (min-width: $tablet-width) {
     padding: 0 50px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .form__wrapper-group:nth-child(even) {
@@ -36,6 +40,38 @@
     &--contacts {
       grid-template-columns: auto;
       row-gap: 24px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 928px;
+    margin: 0 auto;
+    padding-bottom: 49px;
+    grid-template-columns: 85px 1fr;
+
+    &--checkbox {
+      padding-bottom: 51px;
+    }
+
+    &--personal,
+    &--other,
+    &--contacts {
+      padding-bottom: 50px;
+      padding-right: 114px;
+    }
+
+    &--personal {
+      column-gap: 31px;
+    }
+
+    &--contacts {
+      grid-template-columns: auto;
+      row-gap: 24px;
+      padding-right: 114px;
+    }
+
+    &--other {
+      column-gap: 29px;
     }
   }
 }
@@ -70,6 +106,10 @@
     &::before {
       display: none;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 18px;
   }
 }
 
@@ -133,6 +173,13 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 49px;
+    width: 700px;
+  }
 }
 
 .form__required-info {
@@ -154,5 +201,6 @@
 
   @media (min-width: $tablet-width) {
     padding: 16px 30px;
+    margin-right: 20px;
   }
 }

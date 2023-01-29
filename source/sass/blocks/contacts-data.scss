@@ -4,6 +4,10 @@
     grid-template-columns: 147px 1fr;
     column-gap: 20px;
   }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 94px 1fr;
+  }
 }
 
 .contacts-data__wrapper-input {
@@ -68,6 +72,15 @@
 
     &--tel {
       right: 25px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 4px;
+
+    &--tel {
+      top: 45%;
+      right: 8px;
     }
   }
 }

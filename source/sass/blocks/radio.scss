@@ -37,6 +37,10 @@
     height: 50px;
     margin-right: 27px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 29px;
+  }
 }
 
 .radio__control-description {
