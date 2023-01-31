@@ -11,10 +11,26 @@
     background-image: url("../img/index/house-tablet.jpg");
     background-size: 768px auto;
     background-position: center -67px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 24px;
+      background: url("../img/icons/caterpillar.svg") center / auto 24px repeat-x;
+      bottom: -14px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 93px;
+
+    &::after {
+      height: 39px;
+      background: url("../img/icons/caterpillar.svg") center / auto 39px repeat-x;
+      bottom: -23px;
+    }
   }
 }
 

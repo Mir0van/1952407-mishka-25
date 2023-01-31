@@ -2,15 +2,19 @@
   padding: 0 30px;
   padding-top: 32px;
   padding-bottom: 42px;
+  background: url("../img/icons/zigzag.svg") bottom center / auto 7px repeat-x;
 
   @media (min-width: $tablet-width) {
     padding: 0 50px;
     padding-top: 54px;
+    padding-bottom: 68px;
+    background-size: auto 17px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0;
     padding-top: 74px;
+    background: none;
   }
 }
 
@@ -28,6 +32,8 @@
     column-gap: 58px;
     width: 1050px;
     margin: 0 auto;
+    padding-bottom: 96px;
+    background: url("../img/icons/zigzag.svg") bottom center / auto 23px repeat-x;
   }
 }
 
