@@ -1,0 +1,28 @@
+.catalog {
+  padding: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 67px 50px 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 110px 0 57px;
+    margin: 0 auto;
+    width: 1050px;
+  }
+}
+
+.catalog__list {
+  @include reset-list;
+  display: grid;
+  row-gap: 30px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 51px;
+  }
+}

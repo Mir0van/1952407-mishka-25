@@ -1,0 +1,155 @@
+.intro {
+  padding-top: 73px;
+  background-color: $color-tertiary;
+  background-image: url("../img/index/house-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center -18px;
+  background-size: 320px auto;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 89px;
+    background-image: url("../img/index/house-tablet.jpg");
+    background-size: 768px auto;
+    background-position: center -67px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 24px;
+      background: url("../img/icons/caterpillar.svg") center / auto 24px repeat-x;
+      bottom: -14px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 93px;
+
+    &::after {
+      height: 39px;
+      background: url("../img/icons/caterpillar.svg") center / auto 39px repeat-x;
+      bottom: -23px;
+    }
+  }
+}
+
+.intro__container {
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1050px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.intro__title {
+  @include font-values(700, 27px, 1.11);
+  text-align: center;
+  margin: 0;
+  margin-bottom: 120px;
+  padding: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    @include font-values(700, 43px, 1.16);
+    margin-bottom: 372px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font-values(700, 53px, 1.08);
+    margin-bottom: 355px;
+  }
+}
+
+.intro__list {
+  @include reset-list;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.intro__item {
+  @include font-values(700, 19px, 1.26, $main-color);
+  position: relative;
+  transition: 0.2s;
+
+  &:hover {
+    transform: translateY(-5px);
+    padding-bottom: 5px;
+    margin-bottom: -5px;
+
+    .intro__link::after {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    .intro__link::after {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    @include font-values(700, 20px, 1.5, $main-color);
+  }
+}
+
+.intro__item:nth-child(odd) {
+  background-color: $color-brand;
+}
+
+.intro__item:nth-child(even) {
+  background-color: $color-brand-secondary;
+}
+
+.intro__link {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 24px 0 31px 30px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding: 25px 0 31px 36px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+  }
+
+  &--lamp::after {
+    width: 40px;
+    height: 62px;
+    right: 16px;
+    background-image: url("../img/icons/lamp.svg");
+
+    @media (min-width: $tablet-width) {
+      right: 17px;
+    }
+  }
+
+  &--cube::after {
+    width: 60px;
+    height: 60px;
+    right: -3px;
+    background-image: url("../img/icons/cube.svg");
+
+    @media (min-width: $tablet-width) {
+      right: 4px;
+    }
+  }
+}
+
+.intro__text-wrapper {
+  display: inline-block;
+  width: 130px;
+}

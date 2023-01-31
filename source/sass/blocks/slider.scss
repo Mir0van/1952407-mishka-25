@@ -1,0 +1,32 @@
+.slider__toogle {
+  border: 1px solid $color-secondary;
+  width: 50%;
+  height: 52px;
+  background-color: $main-color;
+  background-image: url("../img/icons/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: 0.1s;
+
+  &--back {
+    border-right: none;
+  }
+
+  &--next {
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 88px;
+    border: none;
+  }
+}

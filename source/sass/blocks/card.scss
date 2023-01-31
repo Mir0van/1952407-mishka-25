@@ -1,0 +1,143 @@
+.card {
+  display: flex;
+  flex-direction: column;
+
+  &:hover .card__wrapper {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active .card__wrapper {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+  }
+}
+
+.card__link-image {
+  flex-shrink: 0;
+}
+
+.card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 334px;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+  }
+}
+
+.card__wrapper {
+  padding: 28px 28px 26px;
+  border: 1px solid $color-secondary;
+
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+    padding: 27px 32px 24px;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 27px 27px 24px;
+  }
+}
+
+.card__link-title {
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.card__title {
+  @include font-values(700, 17px, 1.41);
+  margin: 0;
+
+  &:hover {
+    color: rgba($main-color-text, 60%);
+  }
+
+  &:active {
+    color: rgba($main-color-text, 30%);
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
+.card__text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 2.31;
+  margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 11px;
+  }
+}
+
+.card__wrapper-price {
+  padding-top: 22px;
+  border-top: 1px solid $color-secondary;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    line-height: 1.41;
+    align-self: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 24px;
+  }
+}
+
+.card__price {
+  padding-right: 15px;
+}
+
+.card__button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  transform: translateX(2px);
+  cursor: pointer;
+
+  &:hover .card__icon {
+    fill: $color-brand;
+  }
+
+  &:active .card__icon {
+    fill: rgba($color-brand, 30%);
+  }
+
+  @media (min-width: $desktop-width) {
+    transform: translateX(-3px);
+  }
+}
+
+.card__icon {
+  opacity: 1;
+  fill: rgba($main-color-text, 20%);
+}

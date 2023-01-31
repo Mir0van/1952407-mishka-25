@@ -1,1 +1,35 @@
-// Начните писать стили здесь
+// basic styles
+@import "./basic/variables.scss";
+@import "./basic/mixins.scss";
+@import "./basic/fonts.scss";
+@import "./basic/base.scss";
+@import "./basic/visually-hidden.scss";
+
+// index
+@import "./blocks/page.scss";
+@import "./blocks/main-page.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/intro.scss";
+@import "./blocks/best.scss";
+@import "./blocks/button.scss";
+@import "./blocks/about.scss";
+@import "./blocks/reviews.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/main-footer.scss";
+@import "./blocks/modal.scss";
+
+// catalog
+@import "./blocks/main-catalog.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/card.scss";
+@import "./blocks/production.scss";
+
+// form
+@import "./blocks/main-form.scss";
+@import "./blocks/form.scss";
+@import "./blocks/radio.scss";
+@import "./blocks/checkbox.scss";
+@import "./blocks/personal-data.scss";
+@import "./blocks/contacts-data.scss";

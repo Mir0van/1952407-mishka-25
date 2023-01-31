@@ -1,0 +1,126 @@
+.main-footer {
+  padding-top: 27px;
+  padding-bottom: 23px;
+  background-color: $color-first;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 51px;
+    padding-bottom: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 53px;
+  }
+}
+
+.main-footer__container {
+  padding: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: 102px 1fr 181px;
+    column-gap: 50px;
+    align-items: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1050px;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+
+.main-footer__logo-wrapper {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.main-footer__link-logo {
+  @media (min-width: $tablet-width) {
+    display: block;
+
+    &:hover {
+      .main-footer__logo {
+        fill: $color-brand-tertiary;
+      }
+    }
+
+    &:active {
+      .main-footer__logo {
+        fill: rgba($color-brand-tertiary, 30%);
+      }
+    }
+  }
+}
+
+.main-footer__list-social {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 28px);
+  gap: 10px 29px;
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 31px;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    width: 100%;
+    padding-top: 6px;
+  }
+}
+
+.main-footer__link {
+  display: block;
+  width: 28px;
+  height: 22px;
+
+  &:hover {
+    .main-footer__icon {
+      fill: $color-brand-tertiary;
+    }
+  }
+
+  &:active {
+    .main-footer__icon {
+      fill: rgba($color-brand-tertiary, 30%);
+    }
+  }
+}
+
+.main-footer__copyright-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid $color-quinary;
+  padding-top: 22px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    border: none;
+  }
+}
+
+.main-footer__copyright-text {
+  font-size: 19px;
+  line-height: 0.95;
+  margin-right: 28px;
+}
+
+.main-footer__copyright-link {
+  :hover {
+    fill: $color-brand-tertiary;
+  }
+
+  :active {
+    fill: rgba($color-brand-tertiary, 30%);
+  }
+}
+
+.main-footer__copyright-icon {
+  display: block;
+}

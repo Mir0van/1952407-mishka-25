@@ -1,0 +1,145 @@
+.about {
+  padding-top: 31px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 68px;
+  }
+}
+
+.about__container {
+  padding: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    width: 700px;
+    margin: 0 auto;
+  }
+}
+
+.about__title {
+  @include font-values(700, 25px, 1.2);
+  margin: 0;
+  margin-bottom: 82px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    line-height: 1.16;
+    margin-bottom: 98px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 53px;
+    line-height: 1.08;
+    margin-bottom: 95px;
+  }
+}
+
+.about__list {
+  @include reset-list;
+  @include font-values(700, 17px, 1.18);
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 110px;
+  }
+
+  @media (min-width: $desktop-width) {
+    row-gap: 111px;
+  }
+}
+
+.about__item {
+  padding-right: 11px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/icons/heart.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    top: -34px;
+    left: 24px;
+    transform: translate(-50%, -50%);
+  }
+
+  &--eco::before {
+    background-image: url("../img/icons/flower.svg");
+  }
+
+  &--scandy::before {
+    background-image: url("../img/icons/money.svg");
+    top: -39px;
+  }
+
+  &--love::before {
+    background-image: url("../img/icons/ball.svg");
+    left: 21px;
+  }
+
+  &--support::before {
+    background-image: url("../img/icons/rocket.svg");
+    top: -38px;
+    left: 22px;
+  }
+
+  &--gift::before {
+    background-image: url("../img/icons/gift.svg");
+    top: -36px;
+    left: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-right: 40px;
+
+    &--eco {
+      order: 1;
+    }
+
+    &--scandy {
+      order: 3;
+    }
+
+    &--like {
+      order: 5;
+    }
+
+    &--love {
+      order: 2;
+    }
+
+    &--support {
+      order: 4;
+    }
+
+    &--gift {
+      order: 6;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 55px;
+  }
+}
+
+.about__item:not(:last-child) {
+  margin-bottom: 83px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+

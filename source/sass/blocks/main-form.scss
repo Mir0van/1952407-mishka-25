@@ -1,0 +1,72 @@
+.main-form__header {
+  padding: 73px 30px;
+  background-color: $color-first;
+
+  @media (min-width: $tablet-width) {
+    padding: 35px 50px 86px;
+    background-color: $color-tertiary;
+    background-image: url("../img/icons/caterpillar.svg");
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    background-size: auto 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 37px;
+    padding-bottom: 114px;
+    background-size: auto 35.9px;
+  }
+}
+
+.main-form__title {
+  margin: 0;
+  font-size: 27px;
+  line-height: 1.11;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    line-height: 1.16;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 53px;
+    line-height: 1.08;
+    margin: 0 auto;
+    width: 1050px;
+  }
+}
+
+.main-form__form {
+  padding-top: 17px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 99px;
+  }
+}
+
+.main-form__description {
+  font-size: 13px;
+  line-height: 1.85;
+  padding: 0 30px;
+  margin: 0;
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    line-height: 1.76;
+    padding: 0 50px;
+    margin-bottom: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1050px;
+    margin: 0 auto;
+    margin-bottom: 13px;
+    padding: 0 175px;
+  }
+}
