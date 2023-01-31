@@ -39,6 +39,24 @@
   }
 }
 
+.main-footer__link-logo {
+  @media (min-width: $tablet-width) {
+    display: block;
+
+    &:hover {
+      .main-footer__logo {
+        fill: $color-brand-tertiary;
+      }
+    }
+
+    &:active {
+      .main-footer__logo {
+        fill: rgba($color-brand-tertiary, 30%);
+      }
+    }
+  }
+}
+
 .main-footer__list-social {
   @include reset-list;
   display: grid;
@@ -60,6 +78,18 @@
   display: block;
   width: 28px;
   height: 22px;
+
+  &:hover {
+    .main-footer__icon {
+      fill: $color-brand-tertiary;
+    }
+  }
+
+  &:active {
+    .main-footer__icon {
+      fill: rgba($color-brand-tertiary, 30%);
+    }
+  }
 }
 
 .main-footer__copyright-wrapper {
@@ -79,6 +109,16 @@
   font-size: 19px;
   line-height: 0.95;
   margin-right: 28px;
+}
+
+.main-footer__copyright-link {
+  :hover {
+    fill: $color-brand-tertiary;
+  }
+
+  :active {
+    fill: rgba($color-brand-tertiary, 30%);
+  }
 }
 
 .main-footer__copyright-icon {

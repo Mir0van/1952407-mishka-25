@@ -123,6 +123,16 @@
   border-bottom: 1px solid $color-brand;
   justify-self: start;
 
+  &:hover {
+    color: $color-brand-tertiary;
+  }
+
+  &:active {
+    color: $color-brand-tertiary;
+    border-bottom: none;
+    margin-bottom: 1px;
+  }
+
   @media (min-width: $tablet-width) {
     align-self: start;
   }

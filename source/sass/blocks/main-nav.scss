@@ -19,6 +19,16 @@
   border-bottom: 1px solid $color-secondary;
 }
 
+.main-nav__logo {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .main-nav__primary-list,
 .main-nav__user-nav,
 .main-nav__secondary-list {
@@ -39,6 +49,22 @@
   display: block;
   padding: 27px 33px 27px 76px;
   position: relative;
+
+  &:hover {
+    color: rgba($main-color-text, 60%);
+
+    .main-nav__icon {
+      color: rgba($color-brand, 100%);
+    }
+  }
+
+  &:active {
+    color: rgba($main-color-text, 30%);
+
+    .main-nav__icon {
+      color: rgba($color-brand, 30%);
+    }
+  }
 }
 
 .main-nav__icon {
@@ -46,10 +72,21 @@
   top: 50%;
   left: 32px;
   transform: translateY(-50%);
+  color: rgba($main-color-text, 20%);
 }
 
 .main-nav__info {
   display: none;
+}
+
+.main-nav__info-link {
+  &:hover {
+    color: rgba($main-color-text, 60%);
+  }
+
+  &:active {
+    color: rgba($main-color-text, 30%);
+  }
 }
 
 @media (min-width: $tablet-width) {
