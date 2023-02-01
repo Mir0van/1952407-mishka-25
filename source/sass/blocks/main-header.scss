@@ -1,3 +1,9 @@
+@media (max-width: $max-mobile-width) {
+  .main-header--js-menu {
+    min-height: 79px;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .main-header {
     background-color: $color-tertiary;

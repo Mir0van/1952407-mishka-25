@@ -1,15 +1,113 @@
 .main-nav {
   @include font-values(700, 17px, 1.41);
   background-color: $main-color;
+  position: relative;
+}
+
+.main-nav--opened {
+  @media (max-width: $max-mobile-width) {
+    position: absolute;
+    width: 100%;
+    min-width: 320px;
+    z-index: 100;
+  }
+}
+
+.main-nav--closed {
+  @media (max-width: $max-mobile-width) {
+    position: absolute;
+    width: 100%;
+    min-width: 320px;
+    z-index: 100;
+
+    .main-nav__primary-list,
+    .main-nav__user-nav {
+      display: none;
+    }
+  }
 }
 
 .main-nav--no-js {
-  display: block;
-  position: static;
+  @media (max-width: $max-mobile-width) {
+    display: block;
+    position: relative;
+
+    .main-nav__primary-list,
+    .main-nav__user-nav {
+      display: block;
+    }
+  }
 }
 
-.main-nav__toogle--nojs {
+.main-nav__toogle {
+  cursor: pointer;
+  padding: 0 15px;
+  border: none;
+  background-color: $main-color;
+  position: absolute;
+  top: 40px;
+  right: -9px;
+  z-index: 2;
+  height: 50px;
+  transform: translate(-50%, -52%);
+}
+
+.main-nav__toogle--no-js {
   display: none;
+}
+
+.main-nav__toogle-icon {
+  display: block;
+  width: 20px;
+  background-color: $main-color-text;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $main-color-text;
+  }
+}
+
+.main-nav__toogle--closed {
+  .main-nav__toogle-icon {
+    height: 2px;
+    transition: 0.2s;
+
+    &::before,
+    &::after {
+      width: 20px;
+      height: 2px;
+      left: 0;
+      top: 6px;
+      transition: 0.2s;
+    }
+
+    &::after {
+      top: -6px;
+    }
+  }
+}
+
+.main-nav__toogle--opened {
+  .main-nav__toogle-icon {
+    height: 0;
+
+    &::before,
+    &::after {
+      width: 27px;
+      height: 2px;
+      left: -3px;
+      top: -1px;
+      transform: rotate(45deg);
+      transition: 0.2s;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
 }
 
 .main-nav__logo-wrapper {
@@ -17,6 +115,7 @@
   justify-content: center;
   padding: 22px 30px 16px;
   border-bottom: 1px solid $color-secondary;
+  position: relative;
 }
 
 .main-nav__logo {
@@ -90,6 +189,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .main-nav__toogle {
+    display: none;
+  }
+
   .main-nav {
     display: grid;
     grid-template-columns: 1fr auto;
