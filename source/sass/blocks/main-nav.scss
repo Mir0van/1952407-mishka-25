@@ -1,7 +1,6 @@
 .main-nav {
   @include font-values(700, 17px, 1.41);
   background-color: $main-color;
-  position: relative;
 }
 
 .main-nav--opened {
@@ -30,7 +29,7 @@
 .main-nav--no-js {
   @media (max-width: $max-mobile-width) {
     display: block;
-    position: relative;
+    position: static;
 
     .main-nav__primary-list,
     .main-nav__user-nav {
@@ -45,11 +44,11 @@
   border: none;
   background-color: $main-color;
   position: absolute;
-  top: 40px;
+  top: 39px;
   right: -9px;
   z-index: 2;
   height: 50px;
-  transform: translate(-50%, -52%);
+  transform: translate(-50%, -50%);
 }
 
 .main-nav__toogle--no-js {
@@ -115,7 +114,6 @@
   justify-content: center;
   padding: 22px 30px 16px;
   border-bottom: 1px solid $color-secondary;
-  position: relative;
 }
 
 .main-nav__logo {
