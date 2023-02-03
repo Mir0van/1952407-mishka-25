@@ -7,6 +7,11 @@
     padding-bottom: 135px;
     background: url("../img/index/review.jpg") top left / 350px 457px no-repeat,
       url("../img/icons/zigzag.svg") bottom center / auto 17px repeat-x;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/index/review@2x.jpg") top left / 350px 457px no-repeat,
+        url("../img/icons/zigzag.svg") bottom center / auto 17px repeat-x;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -15,6 +20,11 @@
     padding-bottom: 190px;
     background: url("../img/index/review.jpg") top left / 350px 457px no-repeat,
       url("../img/icons/zigzag.svg") bottom center / auto 23px repeat-x;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/index/review@2x.jpg") top left / 350px 457px no-repeat,
+        url("../img/icons/zigzag.svg") bottom center / auto 23px repeat-x;
+    }
   }
 }
 

@@ -6,12 +6,20 @@
   background-position: center -18px;
   background-size: 320px auto;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index/house-mobile@2x.jpg");
+  }
+
   @media (min-width: $tablet-width) {
     padding-top: 89px;
     background-image: url("../img/index/house-tablet.jpg");
     background-size: 768px auto;
     background-position: center -67px;
     position: relative;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/house-tablet@2x.jpg");
+    }
 
     &::after {
       position: absolute;
