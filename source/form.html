@@ -13,7 +13,7 @@
   <body class="page__body">
     <!-- шапка -->
     <header class="main-header">
-      <nav class="main-header__nav main-nav main-nav--no-js">
+      <nav class="main-header__nav main-nav main-nav--closed main-nav--no-js">
         <div class="main-nav__logo-wrapper">
           <a class="main-nav__logo-link" href="./index.html">
             <picture>
@@ -23,8 +23,9 @@
             </picture>
           </a>
         </div>
-        <button class="main-nav__toogle main-nav__toogle--nojs">
+        <button class="main-nav__toogle main-nav__toogle--no-js">
           <span class="visually-hidden">Открыть меню</span>
+          <span class="main-nav__toogle-icon"></span>
         </button>
         <ul class="main-nav__primary-list">
           <li class="main-nav__item main-nav__item--decorate">
@@ -278,5 +279,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/nav-toogle.js"></script>
   </body>
 </html>
