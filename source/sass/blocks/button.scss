@@ -19,4 +19,10 @@
     color: rgba($main-color, 30%);
     background-color: $color-quaternary;
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    line-height: 0.94;
+    padding: 16px 10px;
+  }
 }
