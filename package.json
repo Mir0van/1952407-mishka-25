@@ -28,7 +28,8 @@
     "lint": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
     "start": "gulp",
-    "live": "gulp live"
+    "live": "gulp live",
+    "publish": "gulp build && gh-pages -d build"
   },
   "browserslist": [
     "last 2 versions",
@@ -48,5 +49,8 @@
   "engines": {
     "node": "^16"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "gh-pages": "^5.0.0"
+  }
 }
